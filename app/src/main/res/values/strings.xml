@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">PELLET EXTRUDER</string>
+    <string name="company_name">by FABTORY</string>
+    <string name="connect">Find Device</string>
+    <string name="start">Connect</string>
+
+    <string name="starting">Starting Extruder...</string>
+    <string name="bt_Ready">Bluetooth is Ready.</string>
+    <string name="bt_Enabled">Bluetooth is Enabled, press CONNECT to Proceed...</string>
+    <string name="bt_Disabled">Bluetooth is Disabled.</string>
+    <string name="bt_not_paired">Bluetooth Target is NOT Paired.</string>
+    <string name="bt_disabled">Enabling Bluetooth</string>
+    <string name="bt_found">Extruder Found, press Start to Proceed...</string>
+    <string name="bt_searching">Searching for Extruder</string>
+    <string name="bt_not_found">Could NOT Find Extruder</string>
+    <string name="bt_error">Could NOT Start the Device Discovery.</string>
+
+    <string name="submit_button">Apply</string>
+    <string name="auto_apply_button">auto-Apply</string>
+    <string name="temperature_graph">temperature_graph</string>
+
+    <string name="NozzleFan">Nozzle-Head Cooling</string>
+    <string name="HeatSinkFan">Heat-Sink Fan</string>
+
+
+    <string name="motorControlTitle">Feedrate Control</string>
+    <string name="coolingControlTitle">Fans Control</string>
+    <string name="tempControlTitle">Temperature Control</string>
+
+    <string name="applyButton">Sync to Device</string>
+    <string name="tempEnabled">Enable</string>
+    <string name="heaterTitle">Heater #:\t</string>
+
+    <string name="motorDirection">Backward Run</string>
+    <string name="motorEnable">Enable</string>
+    <string name="motorRun">Run</string>
+    <string name="motorRunOff">OFF</string>
+    <string name="motorRunOn">ON</string>
+    <string name="motorRPM">Motor Speed:</string>
+
+
+</resources>

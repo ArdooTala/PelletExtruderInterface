@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E1E1E"
+    tools:context=".TempControl">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="16dp">
+
+        <TextView
+            android:id="@+id/tempControlTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-thin"
+            android:text="@string/tempControlTitle"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/lightGray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/linearLayout7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tempControlTitle">
+
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="@string/heaterTitle"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/lightGray" />
+
+                <TextView
+                    android:id="@+id/intensityText0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="TextView"
+                    android:textColor="@color/lightGray"
+                    tools:text="98%" />
+
+                <TextView
+                    android:id="@+id/tmpActual0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:gravity="end"
+                    android:textColor="@color/lightGray"
+                    tools:text="000" />
+
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="/"
+                    android:textColor="@color/midGray" />
+
+                <TextView
+                    android:id="@+id/tmp0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:gravity="end"
+                    android:text="100"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#FFFFFF"
+                    tools:text="299" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="#FFFFFF"
+                    tools:text=" (C)" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/heaterandroidx.appcompat.widget.SwitchCompat0"
+                    style="@android:style/Widget.CompoundButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0"
+                    android:checked="true"
+                    android:gravity="center_vertical"
+                    android:hapticFeedbackEnabled="true"
+                    android:textColorHighlight="@color/colorAccent"
+                    android:textColorLink="@color/colorAccent"
+                    app:thumbTint="@color/colorPrimary"
+                    app:trackTint="@color/colorAccent" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/tmpControl0"
+                style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="300"
+                android:progress="100"
+                app:tickMarkTint="#03A9F4"
+                app:tickMarkTintMode="screen" />
+
+            <ProgressBar
+                android:id="@+id/tmpDisplay0"
+                style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="300"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:progress="30" />
+
+            <ProgressBar
+                android:id="@+id/intensityDisplay0"
+                style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="100"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:progress="30" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="@string/heaterTitle"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/lightGray" />
+
+                <TextView
+                    android:id="@+id/intensityText1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="TextView"
+                    android:textColor="@color/lightGray"
+                    tools:text="98%" />
+
+                <TextView
+                    android:id="@+id/tmpActual1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:gravity="end"
+                    android:textColor="@color/lightGray"
+                    tools:text="000" />
+
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="/"
+                    android:textColor="@color/midGray" />
+
+                <TextView
+                    android:id="@+id/tmp1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:gravity="end"
+                    android:text="100"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#FFFFFF"
+                    tools:text="100" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="#FFFFFF"
+                    tools:text=" (C)" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/heaterandroidx.appcompat.widget.SwitchCompat1"
+                    style="@android:style/Widget.CompoundButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0"
+                    android:checked="true"
+                    android:gravity="center_vertical"
+                    android:hapticFeedbackEnabled="true"
+                    app:thumbTint="@color/colorPrimary"
+                    app:trackTint="@color/colorAccent" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/tmpControl1"
+                style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="300"
+                android:progress="100" />
+
+            <ProgressBar
+                android:id="@+id/tmpDisplay1"
+                style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="300"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:progress="30" />
+
+            <ProgressBar
+                android:id="@+id/intensityDisplay1"
+                style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="100"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:progress="30" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="@string/heaterTitle"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/lightGray" />
+
+                <TextView
+                    android:id="@+id/intensityText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="TextView"
+                    android:textColor="@color/lightGray"
+                    tools:text="98%" />
+
+                <TextView
+                    android:id="@+id/tmpActual2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:gravity="end"
+                    android:textColor="@color/lightGray"
+                    tools:text="000" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="/"
+                    android:textColor="@color/midGray" />
+
+                <TextView
+                    android:id="@+id/tmp2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:gravity="end"
+                    android:text="100"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#FFFFFF"
+                    tools:text="100" />
+
+                <TextView
+                    android:id="@+id/rpmValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="#FFFFFF"
+                    tools:text=" (C)" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/heaterandroidx.appcompat.widget.SwitchCompat2"
+                    style="@android:style/Widget.CompoundButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0"
+                    android:checked="true"
+                    android:gravity="center_vertical"
+                    android:hapticFeedbackEnabled="true"
+                    app:thumbTint="@color/colorPrimary"
+                    app:trackTint="@color/colorAccent" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/tmpControl2"
+                style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="300"
+                android:progress="100" />
+
+            <ProgressBar
+                android:id="@+id/tmpDisplay2"
+                style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="300"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:progress="30" />
+
+            <ProgressBar
+                android:id="@+id/intensityDisplay2"
+                style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="100"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:progress="30" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_weight="0"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="@string/heaterTitle"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="@color/lightGray" />
+
+                <TextView
+                    android:id="@+id/intensityText3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:text="TextView"
+                    android:textColor="@color/lightGray"
+                    tools:text="98%" />
+
+                <TextView
+                    android:id="@+id/tmpActual3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-thin"
+                    android:gravity="end"
+                    android:textColor="@color/lightGray"
+                    tools:text="000" />
+
+                <TextView
+                    android:id="@+id/textView14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:text="/"
+                    android:textColor="@color/midGray" />
+
+                <TextView
+                    android:id="@+id/tmp3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0"
+                    android:fontFamily="sans-serif-thin"
+                    android:gravity="end"
+                    android:text="100"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                    android:textColor="#FFFFFF"
+                    tools:text="100" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                    android:textColor="#FFFFFF"
+                    tools:text=" (C)" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/heaterandroidx.appcompat.widget.SwitchCompat3"
+                    style="@android:style/Widget.CompoundButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="16dp"
+                    android:layout_weight="0"
+                    android:checked="true"
+                    android:gravity="center_vertical"
+                    android:hapticFeedbackEnabled="true"
+                    app:thumbTint="@color/colorPrimary"
+                    app:trackTint="@color/colorAccent" />
+            </LinearLayout>
+
+            <SeekBar
+                android:id="@+id/tmpControl3"
+                style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="300"
+                android:progress="100" />
+
+            <ProgressBar
+                android:id="@+id/tmpDisplay3"
+                style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="300"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:progress="30" />
+
+            <ProgressBar
+                android:id="@+id/intensityDisplay3"
+                style="@android:style/Widget.Holo.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:max="100"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:progress="30" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearLayout7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <Button
+                android:id="@+id/applyTmpButton"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorAccent"
+                android:fontFamily="sans-serif-thin"
+                android:hapticFeedbackEnabled="true"
+                android:text="@string/applyButton"
+                android:textColor="@color/lightGray" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:fontFamily="sans-serif-thin"
+                android:text="@string/auto_apply_button"
+                android:textColor="@color/lightGray"
+                android:textColorHint="#FFFFFF" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>
